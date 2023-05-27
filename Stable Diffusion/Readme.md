@@ -12,14 +12,14 @@ Stable Diffusion Image-to-Prompt
 
 
 ## 比赛相关
-比赛目标
+#### 比赛目标
 
 本次比赛的目标是扭转生成文本到图像模型的典型方向：不是从文本提示生成图像，而是可以创建一个模型来预测给定生成图像的文本提示。将对包含由 Stable Diffusion 2.0 生成的各种对的数据集进行预测，(prompt, image)以了解潜在关系的可逆性。
 
-本次比赛一大特色就是不提供训练集，需要自己搜集图像文本匹配数据。
+比赛一大特色就是不提供训练集，需要自己搜集图像文本匹配数据，因此这次的公开榜单到最终成绩的排名变化不大。
 
 
-## [Trick]
+## [Trick](https://github.com/huangzy2333/Kaggle/tree/main/Stable%20Diffusion/Trick)
 本次比赛的目标是扭转生成文本到图像模型的典型方向：不是从文本提示生成图像，而是可以创建一个模型来预测给定生成图像的文本提示。将对包含由 Stable Diffusion 2.0 生成的各种对的数据集进行预测，(prompt, image)以了解潜在关系的可逆性。
 
 ## [最终方案](https://github.com/huangzy2333/Kaggle/blob/main/Stable%20Diffusion/sd-knnregression-clip-vit.ipynb)
@@ -27,9 +27,18 @@ Public LB：0.59181  Private LB：0.58885
 
 ## Top方案
 记录Top3的方案
+[Top1](https://www.kaggle.com/competitions/stable-diffusion-image-to-prompts/discussion/411237)
+
+[Top2](https://www.kaggle.com/competitions/stable-diffusion-image-to-prompts/discussion/410606)
+
+[Top3](https://www.kaggle.com/competitions/stable-diffusion-image-to-prompts/discussion/410686)
+
+[Top36](https://www.kaggle.com/competitions/stable-diffusion-image-to-prompts/discussion/410609)
+特别提一下第36名的提交，感觉他的是和我的比较像的，但这个notebook在第三个模型处又用了集成加权。先将几个clip blip模型加权集成为一个较好的模型后，再和knn+clip一起集成，能提升不少。
+
 
 ## 感想
-感觉深度学习比赛真的很靠计算资源，还有现在比拼很多大模型
+感觉深度学习比赛真的很靠计算资源，还有现在的比拼是很多大型模型。在这次比赛中我不仅认识了clip，blip，vit，还在top模型里知道了ConvNeXt这些，很神奇。
 
 
 
