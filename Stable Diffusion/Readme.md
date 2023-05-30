@@ -5,6 +5,8 @@ Stable Diffusion Image-to-Prompt
 最终靠参考大佬分享的高分方案加自己训练了模型调了一些参拿到了铜牌🥉，但也很高兴拿到这个名次！
 >多模态比赛 https://www.kaggle.com/competitions/stable-diffusion-image-to-prompts
 
+![第一枚铜牌](images/medal.jpg)
+
 * Stable Diffusion比赛相关
 * 一些Trick
 * 最终提交方案
@@ -20,8 +22,10 @@ Stable Diffusion Image-to-Prompt
 
 
 ## [Trick](https://github.com/huangzy2333/Kaggle/tree/main/Stable%20Diffusion/Trick)
-加入一些小trick，可以在lb上提升.
-（1）比赛本身要求是图像生成文本，![Example Image](images/example.jpg)。
+加入一些小trick，可以在lb上提升。
+
+（1）比赛本身要求是图像生成文本，
+![生成和比较流程](images/image2text.jpg)。
 
 但实际上可以通过收集大量有Stable Diffusion，GPT4还有更多生成的图片和原始文本。输入图片，通过训练模型，找到匹配的prompt，直接输出prompt编码。
 
@@ -30,7 +34,10 @@ Stable Diffusion Image-to-Prompt
 （3）KNN中匹配的图片数量增加也会使lb相对增加。原始KNN是匹配相似度前100的一百张图片，我最后是增加到了150张，之后再增加效果也几乎不增加了。
 
 ## [最终方案](https://github.com/huangzy2333/Kaggle/blob/main/Stable%20Diffusion/sd-knnregression-clip-vit.ipynb)
+
 Public LB：0.59181  Private LB：0.58885
+
+KNN + ClipInterrogator + Clip-Vit
 
 ## Top方案
 记录Top3的方案
