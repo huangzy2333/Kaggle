@@ -58,7 +58,7 @@
 我是直接使用57万的数据训练模型，使用kaggle免费GPU基本一次只能训练一个epoch。在看了discussion后，发现训练的模型大多都在1-3个epoch时达到lb最优，因此我clip-vit-large-patch14只训练了3个epoch，在epoch3达到的0.55835。
 
 ## KNN
-![knn匹配图片文本的过程](images/knn.png)
+![knn匹配图片文本的过程](Stable Diffusion/images/knn.png)
 除了这样匹配后，还可以修改匹配的其中一方。
 
 ## ClipInterrogator
