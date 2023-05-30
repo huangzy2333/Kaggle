@@ -16,11 +16,18 @@ Stable Diffusion Image-to-Prompt
 
 本次比赛的目标是扭转生成文本到图像模型的典型方向：不是从文本提示生成图像，而是可以创建一个模型来预测给定生成图像的文本提示。将对包含由 Stable Diffusion 2.0 生成的各种对的数据集进行预测，(prompt, image)以了解潜在关系的可逆性。
 
-比赛一大特色就是不提供训练集，需要自己搜集图像文本匹配数据，因此这次的公开榜单到最终成绩的排名变化不大。
+比赛一大特色没有训练集，只给定了Stable Diffusion2.0的模型，需要自己搜集图像文本匹配数据，因此这次的公开榜单到最终成绩的排名变化不大。
 
 
 ## [Trick](https://github.com/huangzy2333/Kaggle/tree/main/Stable%20Diffusion/Trick)
-本次比赛的目标是扭转生成文本到图像模型的典型方向：不是从文本提示生成图像，而是可以创建一个模型来预测给定生成图像的文本提示。将对包含由 Stable Diffusion 2.0 生成的各种对的数据集进行预测，(prompt, image)以了解潜在关系的可逆性。
+加入一些小trick，可以在lb上提升.
+（1）比赛本身要求是图像生成文本，![Example Image](images/example.jpg)。
+
+但实际上可以通过收集大量有Stable Diffusion，GPT4还有更多生成的图片和原始文本。输入图片，通过训练模型，找到匹配的prompt，直接输出prompt编码。
+
+（2）在{flaves}前添加"in the style of" 会有0.0001+的提升。
+
+（3）KNN中匹配的图片数量增加也会使lb相对增加。原始KNN是匹配相似度前100的一百张图片，我最后是增加到了150张，之后再增加效果也几乎不增加了。
 
 ## [最终方案](https://github.com/huangzy2333/Kaggle/blob/main/Stable%20Diffusion/sd-knnregression-clip-vit.ipynb)
 Public LB：0.59181  Private LB：0.58885
