@@ -5,7 +5,7 @@ Stable Diffusion Image-to-Prompt
 最终靠参考大佬分享的高分方案加自己训练了模型调了一些参拿到了铜牌🥉，但也很高兴拿到这个名次！
 >多模态比赛 https://www.kaggle.com/competitions/stable-diffusion-image-to-prompts
 
-![第一枚铜牌](images/medal.jpg)
+![第一枚铜牌](images/medal.png)
 
 * Stable Diffusion比赛相关
 * 一些Trick
@@ -25,7 +25,7 @@ Stable Diffusion Image-to-Prompt
 加入一些小trick，可以在lb上提升。
 
 （1）比赛本身要求是图像生成文本，
-![生成和比较流程](images/image2text.jpg)。
+![生成和比较流程](images/image2text.png)。
 
 但实际上可以通过收集大量有Stable Diffusion，GPT4还有更多生成的图片和原始文本。输入图片，通过训练模型，找到匹配的prompt，直接输出prompt编码。
 
@@ -41,6 +41,7 @@ KNN + ClipInterrogator + Clip-Vit
 
 ## Top方案
 记录Top3的方案
+
 [Top1](https://www.kaggle.com/competitions/stable-diffusion-image-to-prompts/discussion/411237)
 
 [Top2](https://www.kaggle.com/competitions/stable-diffusion-image-to-prompts/discussion/410606)
@@ -48,6 +49,7 @@ KNN + ClipInterrogator + Clip-Vit
 [Top3](https://www.kaggle.com/competitions/stable-diffusion-image-to-prompts/discussion/410686)
 
 [Top36](https://www.kaggle.com/competitions/stable-diffusion-image-to-prompts/discussion/410609)
+
 特别提一下第36名的提交，感觉他的是和我的比较像的，但这个notebook在第三个模型处又用了集成加权。先将几个clip blip模型加权集成为一个较好的模型后，再和knn+clip一起集成，能提升不少。
 
 
